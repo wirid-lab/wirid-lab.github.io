@@ -1,0 +1,33 @@
+---
+id: nodes
+hide_title: false
+title: Nodos Iot
+---
+
+export const Highlight = ({children, color}) => ( <span style={{
+      backgroundColor: color,
+      borderRadius: '5px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>{children}</span> );
+
+
+Dentro de la plataforma se pueden gestionar los nodos creados por cada usuario permitiendo mostrar los datos almacenados de cada uno de ellos.
+
+Cada nodo cuenta con un ID único que será utilizado junto con el token para almacenar la información corresponde a cada nodo. 
+
+
+
+<div align="center" style={{margin: '20px'}}>
+<img src={require('./../assets/iot/create-node.png').default}  align="center"/>
+</div>
+
+## Crear Nodo
+
+Oprima el botón +  e ingrese un nombre para su nodo, luego ingrese el nombre de API para identificarlo dentro de la lista de nodos.
+
+:::caution
+El nombre de API no puede contener caracteres especiales o espacios
+:::
+
+

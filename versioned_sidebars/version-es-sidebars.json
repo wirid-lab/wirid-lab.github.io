@@ -1,0 +1,50 @@
+{
+    "version-es/docs": [
+        {
+            "collapsed": true,
+            "type": "category",
+            "label": "Inicio",
+            "items": [
+                {
+                    "type": "doc",
+                    "id": "version-es/started"
+                },
+                {
+                    "type": "doc",
+                    "id": "version-es/access"
+                },
+                {
+                    "type": "doc",
+                    "id": "version-es/access-advance"
+                }
+            ]
+        },
+        {
+            "collapsed": true,
+            "type": "category",
+            "label": "Plataforma IoT",
+            "items": [
+                {
+                    "type": "doc",
+                    "id": "version-es/iot/description"
+                },
+                {
+                    "type": "doc",
+                    "id": "version-es/iot/nodes"
+                },
+                {
+                    "type": "doc",
+                    "id": "version-es/iot/token-creation"
+                },
+                {
+                    "type": "doc",
+                    "id": "version-es/iot/http"
+                },
+                {
+                    "type": "doc",
+                    "id": "version-es/iot/mqtt"
+                }
+            ]
+        }
+    ]
+}

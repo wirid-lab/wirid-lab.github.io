@@ -1,0 +1,42 @@
+---
+id: token-creation
+hide_title: false
+title: Token de acceso
+---
+
+export const Highlight = ({children, color}) => ( <span style={{
+      backgroundColor: color,
+      borderRadius: '5px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>{children}</span> );
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+El token es una cadena de caracteres única que permite identificar y conectar el nodo IoT de un usuario en la plataforma y así permitirle almacenar datos de los sensores que reporta cada uno de los nodos IoT.
+
+:::info
+ El token puede ser utilizado en más de un nodo, sin embargo se recomienda utilizar un token por nodo para mayor seguridad.
+:::
+
+
+
+## Crear Token
+
+Ingrese en el menú a **My IoT Infrastructure-> Tokens** y oprima el botón  <Highlight color="#4caf50">Create Token</Highlight>  para generar un token nuevo tal como aparece en la siguiente imágen
+
+
+
+<div align="center" style={{margin: '20px'}}>
+<img src={require('./../assets/iot/create-token.png').default}  align="center"/>
+</div>
+
+
+
+## Eliminar Token
+
+Si desea eliminar el token, oprima el ícono del lado derecho de cada token creado. Inmediatamente cualquier nodo que se encuentra utilizando el token, no podrá consultar o almacenar datos.
+
+

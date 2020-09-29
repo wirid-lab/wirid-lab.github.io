@@ -1,0 +1,71 @@
+---
+id: access-advance
+hide_title: false
+title: Acceso Avanzado
+---
+
+export const Highlight = ({children, color}) => ( <span style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>{children}</span> );
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+
+## Introducción
+
+Una vez reservados los nodos e iniciado el experimento, si el usuario no desea acceder a los nodos mediante alguna interfaz web, es posible ingresar mediante SSH. Para acceder al laboratorio mediante esta opción debe tener registrado al menos una clave pública en su perfil. 
+
+El laboratorio genera una dirección IP por cada nodo reservado. En la sección My Experiments puede encontrar esta dirección, dependiendo de la aplicación puede acceder a cada uno de los puertos habilitados; en la sección de Tutoriales puede encontrar puntualmente los puertos de cada aplicación.
+
+
+
+## Acceder mediante archivo config
+Si es usuario de equipos con sistema operativo Linux / MacOS / Windows 10 es posible acceder al laboratorio creando un archivo config en la ruta donde se almacenan sus claves ssh (Ver Guía de inicio rápido)  agregando la siguiente información:
+```
+Host wirid-lab
+    HostName wirid-lab.umng.edu.co
+    User geustuser
+    Port 2222
+    IdentityFile ~/.ssh/id_rsa
+    LocalForward <LOCAL_PORT_1> <IP>:<SOURCE_PORT_1>
+    LocalForward <LOCAL_PORT_2> <IP>:<SOURCE_PORT_2>
+    LocalForward <LOCAL_PORT_N> <IP>:<SOURCE_PORT_N>
+```
+Recuerde que se pueden crear diferentes parámetros LocalForward dependiendo de la aplicación y de los nodos reservados. Con esta configuración se está abriendo un túnel SHH mediante la asignación de puertos de su computador `<LOCAL_PORT_N>`  hacia los puertos de la aplicación `<IP>:<SOURCE_PORT_N>`, se aconseja utilizar los puertos `<LOCAL_PORT_N>` recomendados para cada aplicación.
+
+Una vez se haya creado el archivo config  puede ingresar al laboratorio abriendo un terminal/powershell utilizando el  comando ssh wirid-lab y automáticamente el sistema se autentica con el laboratorio con las configuraciones realizadas.
+
+
+
+Por cada experimento debe volver a configurar el archivo config para acceder a los recursos del laboratorio reemplazando los valores `<IP>` `<LOCAL_PORT_N>` `<SOURCE_PORT_N>`.
+
+## Acceder por línea de comando
+Para ingresar mediante línea de comandos basta con abrir un terminal/powershell y ejecutar la siguiente instrucción
+```
+ssh -p 2222 guestuser@wirid-lab.umng.edu.co -L <LOCAL_PORT_1>:<IP>:5901 -L <LOCAL_PORT_2>:<IP>:6901 -L <LOCAL_PORT_N>:<IP>:<SOURCE_PORT_N> 
+```
+
+Recuerde que depende de la aplicación y la cantidad  de nodos deberá agregar el parámetro -L `<LOCAL_PORT_N>:<IP>:<SOURCE_PORT_N>`
+A continuación puede observar un ejemplo de conexión utilizando esta opción.
+
+
+
+## Acceder por PUTTY
+
+
+Ingresar las siguientes configuraciones
+```
+Host Name guestuser@wirid-lab.umng.edu.co
+Port 2222
+Ir a la opción Auth y seleccionar la clave privada generada con PuttyGen
+Ir la pestaña Tunnels e ingresar la cantidad de puertos según la aplicación y cantidad de nodos reservados.
+Guardar las configuraciones y  hacer clic en el botón open 
+```
+
+
+ 

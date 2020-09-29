@@ -19,6 +19,10 @@ module.exports = {
       },
       items: [
         {
+          type: 'docsVersionDropdown',
+          position: 'left',
+        },
+        {
           to: 'docs/',
           activeBasePath: 'docs',
           label: 'Docs',
@@ -26,7 +30,7 @@ module.exports = {
         },
         {
           href: 'https://wirid-lab.umng.edu.co',
-          label: 'Plataforma',
+          label: 'Dashboard',
         },
         {
           href: 'https://gissic.umng.edu.co/wirid-lab',
