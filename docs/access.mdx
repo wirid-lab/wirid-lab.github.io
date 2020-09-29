@@ -1,0 +1,60 @@
+---
+id: access
+hide_title: false
+title: Acceso a la Plataforma
+---
+
+export const Highlight = ({children, color}) => ( <span style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>{children}</span> );
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+## Crear Experimento
+
+1. Ingrese en el menú a **Experiments -> Create**
+2. Indique la fecha y hora de reserva
+3. Seleccione el tiempo de la reserva en minutos o en horas.
+4. Seleccione los nodos a reservar.
+5. A medida que reserva los nodo puede seleccionar la aplicación a instalar.
+6. Una vez configurada la reserva haga click en **Create Experiment**.
+
+
+<div align="center" style={{margin: '20px'}}>
+<img src={require('./started/step4.png').default}  align="center"/>
+</div>
+
+
+
+Si existen otras reservas en el tiempo seleccionado se mostrarán en la tabla inferior la cantidad y nodos reservados.
+
+## Acceso al Nodo
+
+Al ingresar en el menú  **Experiments -> My Experiments**  encontrará una lista de experimentos, cuando el experimento se está ejecutando en el tiempo de la reserva verá una dirección IP asignada a cada nodo.  Dependiendo de la aplicación puede necesitar un token de acceso, para conocerlo haga clic en el icono de la llave. Si desea detener la reserva haga clic en el icono rojo.
+
+<div align="center" style={{margin: '20px'}}>
+<img src={require('./started/step5.png').default}  align="center"/>
+</div>
+
+
+Dependiendo de la aplicación a cargar en los nodos, el usuario tiene las siguientes opciones de conexión:
+
+* Una interfaz web **jupyter** para trabajar con archivos python.
+* Una interfaz web **SSH** para acceder al nodo y ejecutar comandos específicos. Si realizó la instalación de algún paquete, toda la información se perderá dado a que el laboratorio se basa en contenedores Docker.
+* Una interfaz web **VNC*** , esta opción está disponible únicamente para los equipos que ejecutan la aplicación GNU Radio.
+
+Igualmente, durante el desarrollo del experimento tiene la posibilidad apagar o encender el nodo, tenga en cuenta que al apagar el nodo, está apagando el computador embebido y el dispositivo SDR o IOT.  Si enciende el nodo deberá esperar un tiempo aproximado de 1 minuto mientras se despliega nuevamente la aplicación seleccionada para tener acceso mediante SSH o WEB.
+
+Si desea acceder a estas aplicaciones mediante un terminal SSH desde su computador revise el tutorial avanzado.
+
+Para conocer más acerca de cómo usar  aplicaciones que dispone el laboratorio puede ir a Tutoriales.
+
+ 
+:::info
+   Una vez finalizado el tiempo de su experimento, el sistema cerrará automáticamente cualquier conexión que tenga hacia el nodo.  No se preocupe si dejó abierta alguna sesión en el navegador, toda información generada durante la reserva será eliminada de forma permanente.
+:::
+

@@ -1,0 +1,97 @@
+---
+id: started
+hide_title: true
+title: Bienvenidos
+slug: /
+---
+
+export const Highlight = ({children, color}) => ( <span style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>{children}</span> );
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+Bienvenidos
+=======================================
+
+## Introducción
+
+El wirid-lab (Wireless Research Innovation and Development Laboratory) es un laboratorio que hace parte del programa de ingeniería en telecomunicaciones de la Universidad Militar Nueva Granada que está diseñado para controlar equipos de radio definido por software (SDR) y dispositivos IoT mediante la reserva de nodos (Experimentos) de forma remota.  Para brindar la mejor experiencia de usuario,  el laboratorio cuenta con dos tipos de accesos; uno de ellos mediante terminal SSH o mediante aplicativos basados en WEB.
+
+A continuación encontrará los pasos necesarios para ingresar al laboratorio WIRID-LAB, realizar el proceso de reserva y acceder a los nodos del laboratorio. 
+
+## Acceso y Registro al Laboratorio
+
+<div align="center" style={{margin: '20px'}}>
+<img src={require('./started/step1.png').default} align="center"/>
+</div>
+
+
+
+   Para acceder al la plataforma ingrese a https://wirid-lab.umng.edu.co y realice el proceso de autenticación con una cuenta de gmail dando clic en el botón **login**.
+   
+   Si usted es estudiante, docente o personal con correo <Highlight color="#D63518">@unimilitar.edu.co</Highlight> puede ingresar automáticamente, no necesita de realizar registro.  
+   Si no hace parte de la comunidad, haga click en el link **Signup** para llenar el formulario y esperar la aprobación por parte de los administradores.
+
+   Si entra por primera vez, se recomienda actualizar los datos dirigiéndose al perfil que encuentra en el menú o en el link https://wirid-lab.umng.edu.co/#/home/user/my-profile  
+
+
+<div align="center" style={{margin: '20px'}}>
+<img src={require('./started/step2.png').default} width="75%" align="center"/>
+</div>
+
+
+
+
+## Generar Claves de Acceso al Laboratorio
+
+
+<!-- <Tabs
+  defaultValue="apple"
+  values={[
+    {label: 'Linux / Mac / Windows 10', value: 'apple'},
+    {label: 'Orange', value: 'orange'},
+    {label: 'Banana', value: 'banana'},
+  ]}>
+  <TabItem value="apple">This is an apple 🍎</TabItem>
+  <TabItem value="orange">This is an orange 🍊</TabItem>
+  <TabItem value="banana">This is a banana 🍌</TabItem>
+</Tabs> -->
+
+
+
+
+
+### Linux / Mac / Windows 10
+
+1. Abrir  terminal / powershell
+2. Ejecutar el siguiente comando:   ``ssh-keygen -C guestuser`` y en las opciones seleccionar todos los valores por defecto oprimiendo la tecla «Enter». El comando se encarga de generar automáticamente la clave pública y privada.  La ruta donde se guardan las claves por defecto son:
+3. Linux:  ``/home/<USER>/.ssh/``
+4. Mac:  ``/Users/<USER>/.ssh/``
+5. Windows: ``C:\Users\<USER>/.ssh/``
+
+``<USER>`` corresponde al nombre de usuario del equipo.
+
+###  Windows 7/8/10
+
+Si no cuenta con una versión reciente de windows debe instalar un cliente SSH y generar las respectivas claves. Para ello realice lo siguiente:
+
+1. Descargar e instalar el paquete MSI (‘Windows Installer’)  de acuerdo con la versión de su sistema operativo en el link https://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
+2. Una vez instalado, abrir PuTTYgen.exe
+3. Hacer clic en «Generate» y mover aleatoriamente el cursor dentro del área en blanco para generar la clave.
+4. Una vez generada la clave, oprimir el botón Save public key para guardar la clave pública; guarde esta clave con el nombre id_rsa.pub. Luego guarde la clave privada oprimiendo el botón Save private key  con el nombre id_rsa.ppk.  El programa generó un texto que corresponde a la clave pública, guarde esta información en un documento de texto para utilizarla en el paso 4.
+
+<div align="center" style={{margin: '20px'}}>
+<img src={require('./started/step3.png').default}  align="center"/>
+</div>
+
+
+## Cargar Claves de Acceso a la Plataforma
+1. Sí generó las claves por medio  del terminal o powershell, ejecute el comando cat ~/.ssh/id_rsa.pub y copie el texto generado.
+2. Si utilizó PuTTYgen copie el  texto generado de la casilla key, si quiere conocer la clave pública a partir de una clave privada ya almacenada seleccione Load Private Key y cargue la clave privada, automáticamente el programa le mostrará la clave pública correspondiente.
+3. En el menú seleccione SSH Keys o ingrese al link https://wirid-lab.umng.edu.co/#/home/user/my-keys, haga clic en el botón New SSH Public Key, pegue la cadena de texto y haga clic en crear.
+Usted puede agregar tantas claves públicas como quiera, recuerde que al menos debe contar con una para ingresar a los nodos mediante SSH
