@@ -31,6 +31,13 @@
 .navbar--light a{
   color: #ffffff;
 }
+.navbar{
+  background-color: #1A7EBA;
+}
+
+.navbar a{
+  color: #ffffff;
+}
 
 .navbar__link:hover, .navbar__link--active {
   color: #000000 !important;
