@@ -28,9 +28,6 @@ jobs:
             git remote add origin git@github.com:wirid-lab/wirid-lab.github.io.git
             git push --force origin master:gh-pages
 
-
-            
-
 workflows:
   version: 2
   build_and_deploy:
