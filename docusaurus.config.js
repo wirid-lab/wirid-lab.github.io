@@ -5,7 +5,7 @@ module.exports = {
   title: 'Wirid - Lab',
   tagline: 'Wireless Research Innovation and Development Laboratory',
   url: 'https://github.com/wirid-lab/wirid-lab.github.io.git',
-  baseUrl: '/wirid-lab.github.io/',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   favicon: 'img/favicon-96x96.png',
   organizationName: 'lealarcon', // Usually your GitHub org/user name.

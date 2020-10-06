@@ -1,5 +1,5 @@
 {
-    "version-es/docs": [
+    "version-es-1.0.0/docs": [
         {
             "collapsed": true,
             "type": "category",
@@ -7,15 +7,15 @@
             "items": [
                 {
                     "type": "doc",
-                    "id": "version-es/started"
+                    "id": "version-es-1.0.0/started"
                 },
                 {
                     "type": "doc",
-                    "id": "version-es/access"
+                    "id": "version-es-1.0.0/access"
                 },
                 {
                     "type": "doc",
-                    "id": "version-es/access-advance"
+                    "id": "version-es-1.0.0/access-advance"
                 }
             ]
         },
@@ -26,23 +26,23 @@
             "items": [
                 {
                     "type": "doc",
-                    "id": "version-es/iot/description"
+                    "id": "version-es-1.0.0/iot/description"
                 },
                 {
                     "type": "doc",
-                    "id": "version-es/iot/nodes"
+                    "id": "version-es-1.0.0/iot/nodes"
                 },
                 {
                     "type": "doc",
-                    "id": "version-es/iot/token-creation"
+                    "id": "version-es-1.0.0/iot/token-creation"
                 },
                 {
                     "type": "doc",
-                    "id": "version-es/iot/http"
+                    "id": "version-es-1.0.0/iot/http"
                 },
                 {
                     "type": "doc",
-                    "id": "version-es/iot/mqtt"
+                    "id": "version-es-1.0.0/iot/mqtt"
                 }
             ]
         }

@@ -43,3 +43,8 @@
   color: #000000 !important;
   text-decoration: none;
 }
+
+
+.dropdown__menu .dropdown__link{
+  color: black !important;
+}
