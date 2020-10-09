@@ -25,16 +25,23 @@
             "label": "Plataforma IoT",
             "items": [
                 {
-                    "type": "doc",
-                    "id": "version-es-1.0.0/iot/description"
-                },
-                {
-                    "type": "doc",
-                    "id": "version-es-1.0.0/iot/nodes"
-                },
-                {
-                    "type": "doc",
-                    "id": "version-es-1.0.0/iot/token-creation"
+                    "collapsed": false,
+                    "type": "category",
+                    "label": "Información",
+                    "items": [
+                        {
+                            "type": "doc",
+                            "id": "version-es-1.0.0/iot/description"
+                        },
+                        {
+                            "type": "doc",
+                            "id": "version-es-1.0.0/iot/nodes"
+                        },
+                        {
+                            "type": "doc",
+                            "id": "version-es-1.0.0/iot/token-creation"
+                        }
+                    ]
                 },
                 {
                     "type": "doc",
