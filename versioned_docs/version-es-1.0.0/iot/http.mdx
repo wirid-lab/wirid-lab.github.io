@@ -18,13 +18,13 @@ import TabItem from '@theme/TabItem';
 Los únicos metodos habilitados para trabajar en la plataforma son ``GET`` y  ``POST`` para consultar y guardar datos respectivamente de cada uno de los nodos,  tener en cuenta la siguiente información al momento de implementar HTTP en el diseño de los nodos IoT
 
 
-- **{URL}**: ``https://api.wiridlab.site/api/iot/devices/<apiName>``
+- **{URL}**: ``https://api.wiridlab.site/api/iot/devices/<nodeApiName>``
 - **{HEADERS}** : En la petición HTTP debe incluirse la cabecera ``WIRID-LAB-AUTH-TOKEN`` el string generado para consutar o guardar datos
 - **{BODY}** : Para almacenar datos el cuerpo del mensaje debe ser un vector de objetos ``[{data1},{data2},{data_n}]``
 
 
 
-Para conocer implenentaciones en HTTP dentro de la plataforma ingresar a https://github.com/wirid-lab, a continuación se mostrarán dos ejemplos utilizando la herramienta POSTMAN
+A continuación se mostrarán dos ejemplos utilizando la herramienta POSTMAN
 
 ## Guardar Datos
 
@@ -78,8 +78,8 @@ Si la información de su nodo contiene ubicaciones por GPS , recuerde que el for
 
 ### Python
 
-- Consultar datos 
-- Publicar datos
+- [Consultar datos](https://github.com/wirid-lab/iot-http-api-python) 
+- [Publicar datos](https://github.com/wirid-lab/iot-http-api-python)
 
 ### Angular
 

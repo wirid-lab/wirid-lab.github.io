@@ -1,5 +1,46 @@
 ---
 id: mqtt
 hide_title: false
-title: MQTT (Beta)
+title: MQTT 
 ---
+
+
+
+El laboratorio WIRID-LAB cuenta con un broker MQTT para la comunicación M2M con los nodos IoT del laboratorio y/o nodos externos. 
+
+Para realizar la conexión con el broker MQTT tenga en cuenta los siguientes datos de conexón:
+
+- **{BROKER_URL}** : ``mqtt.wiridlab.site``
+- **{PORTS}**:  1883 / 8883 (TSL) / 9001 (WebSocket)
+- **{USERNAME}**: Token generado en la plataforma del laboratorio 
+- **{PASSWORD}**: Campo vacio, la plataforma identifica al usuario por medio del token 
+- **{CLIENT_ID}**: ID único generado al momento de crear el nodo IoT
+
+<div align="center" style={{margin: '20px'}}>
+<img src={require('./../assets/iot/client-id-mqtt.gif').default}  align="center"/>
+</div>
+
+Si desea utilizar el puerto seguro, debe descargar el certificado TSL [aqui](https://raw.githubusercontent.com/wirid-lab/iot-mqtt-python/main/root.pem)
+
+
+## Topics Pub/Sub
+
+Para enviar y recibir datos de los nodos IoT la estructura del topic debe ser  ``iot/<EMAIL>/``,  donde **EMAIL**  corresponde al correo electronico registrado en la plataforma .
+
+### Ejemplo
+
+Se desea publicar la temperatura de diferentes nodos mediante el topic **_temperature_** , realice la configuración de los nodos con el topic  ``iot/<EMAIL>/temperature``, de la misma manera ocurre con los nodos que deseeb recibir información de  **_temperature_** 
+
+## Almacenar datos
+
+Por defecto todos los datos que se envian al  topic ``iot/<EMAIL>/`` y que matenga la estructura de arreglo JSON object  ``[{data1},{data2},{data_n}]`` son almacenados en el ID del nodo IoT.
+
+## Recursos
+
+### Python
+
+- [Pub/Sub](https://github.com/wirid-lab/iot-mqtt-python) 
+
+
+
+
