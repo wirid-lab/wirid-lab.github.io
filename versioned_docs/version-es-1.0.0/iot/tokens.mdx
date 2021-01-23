@@ -1,0 +1,48 @@
+---
+id: tokens
+hide_title: false
+title: Token de acceso
+---
+
+export const Highlight = ({children, color}) => ( <span style={{
+      backgroundColor: color,
+      borderRadius: '5px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>{children}</span> );
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+El token es una cadena de caracteres única que permite identificar y conectar a un nodo o grupo de nodos  del usuario en el WIRID-LAB IoT.  Así mismo permite almacenar y consultar los datos de los sensores que reporta cada uno de los nodos IoT.
+
+:::info
+ El token puede ser utilizado en más de un nodo, sin embargo se recomienda utilizar un token por nodo para mayor cotnrol y seguridad.
+:::
+
+
+
+### Crear Token
+
+Ingrese en el menú a **My IoT Infrastructure-> Tokens** y oprima el botón  <Highlight color="#4caf50">Create Token</Highlight>  para generar un nuevo token. Una vez creado, tiene la opción de configurar el token para identificarlo y habilitar su uso dentro de la plataforma.
+
+
+
+<div align="center" style={{margin: '20px'}}>
+<img src={require('./img/create-token.png').default}  align="center"/>
+</div>
+
+Los permisos que pueden tener los tokens son:
+
+- **Enable**: Habilitar / Deshabilitar el token completamente.
+- **GET Data**: Habilitar / Deshabilitar el token para realizar consultas de los nodos.
+- **POST data**: Habilitar / Deshabilitar el token para almacenar datos.
+- **Enable MQTT**: Habilitar / Deshabilitar el token para usar el nodo con  el broker MQTT. 
+
+
+### Eliminar Token
+
+Si desea eliminar el token, oprima el ícono del lado derecho de cada token creado. Inmediatamente cualquier nodo que se encuentra utilizando el token, no podrá consultar o almacenar datos.
+
+

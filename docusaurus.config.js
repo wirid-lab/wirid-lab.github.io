@@ -45,6 +45,9 @@ module.exports = {
         },
       ],
     },
+   footer: {
+     links:[]
+   }
     // footer: {
     //   style: 'dark',
     //   links: [
@@ -95,6 +98,9 @@ module.exports = {
     //   copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
     // },
   },
+  plugins: [
+   
+  ],
   presets: [
     [
       '@docusaurus/preset-classic',

@@ -22,35 +22,44 @@
         {
             "collapsed": true,
             "type": "category",
+            "label": "Plataforma de Radio",
+            "items": [
+                {
+                    "type": "doc",
+                    "id": "version-es-1.0.0/radio/description"
+                }
+            ]
+        },
+        {
+            "collapsed": true,
+            "type": "category",
             "label": "Plataforma IoT",
             "items": [
                 {
-                    "collapsed": false,
+                    "type": "doc",
+                    "id": "version-es-1.0.0/iot/nodes"
+                },
+                {
+                    "type": "doc",
+                    "id": "version-es-1.0.0/iot/tokens"
+                },
+                {
+                    "collapsed": true,
                     "type": "category",
-                    "label": "Información",
+                    "label": "Comunicación",
                     "items": [
                         {
                             "type": "doc",
-                            "id": "version-es-1.0.0/iot/description"
+                            "id": "version-es-1.0.0/iot/http"
                         },
                         {
                             "type": "doc",
-                            "id": "version-es-1.0.0/iot/nodes"
-                        },
-                        {
-                            "type": "doc",
-                            "id": "version-es-1.0.0/iot/token-creation"
+                            "id": "version-es-1.0.0/iot/mqtt"
                         }
+                       
                     ]
-                },
-                {
-                    "type": "doc",
-                    "id": "version-es-1.0.0/iot/http"
-                },
-                {
-                    "type": "doc",
-                    "id": "version-es-1.0.0/iot/mqtt"
                 }
+                
             ]
         }
     ]

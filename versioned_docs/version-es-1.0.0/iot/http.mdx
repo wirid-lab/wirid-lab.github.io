@@ -42,16 +42,16 @@ A continuación se mostrarán dos ejemplos utilizando la herramienta POSTMAN
 </div>
 
 :::caution
-Si {BODY} o {data_n} no es un vector de objetos  no se almacenará ninguna información
+Si {BODY} o {data_n} no es un array de objetos JSON no se almacenará ninguna información.
 :::
 :::info
-Los datos enviados en el array de objetos serán almacenados de forma indendiente
+Los datos enviados en el array de objetos serán almacenados de forma independiente.
 :::
 :::info
-si en {data_n} no existe el dato **created** se almacenará por defecto la fecha y hora de la petición  
+si en {data_n} no existe el dato **created** se almacenará por defecto la fecha y hora de la petición.
 :::
 
-:::info
+:::caution
 Si la información de su nodo contiene ubicaciones por GPS , recuerde que el formato debe ser {"position": { "lat": FLOAT, "lng": FLOAT }}
 :::
 
@@ -76,10 +76,13 @@ Si la información de su nodo contiene ubicaciones por GPS , recuerde que el for
 
 ## Recursos
 
+A continuación encontrará algunos recursos para usar el WIRID-LAB IoT.
+
+### Arduino
+
 ### Python
 
-- [Consultar datos](https://github.com/wirid-lab/iot-http-api-python) 
-- [Publicar datos](https://github.com/wirid-lab/iot-http-api-python)
+- [Consultar / Publicar datos](https://github.com/wirid-lab/iot-http-api-python)
 
 ### Angular
 

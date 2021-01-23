@@ -14,14 +14,18 @@ export const Highlight = ({children, color}) => ( <span style={{
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+
+Para hacer uso de cada uno de los nodos del laboratorio, es necesario crear experimentos donde se puede reservar los nodos que esten disponibles en las horas seleccionadas. A continuación se indican los pasos para realizar un experimento en el WIRID-LAB.
+
+
 ## Crear Experimento
 
 1. Ingrese en el menú a **Experiments -> Create**
 2. Indique la fecha y hora de reserva
-3. Seleccione el tiempo de la reserva en minutos o en horas.
+3. Seleccione el tiempo de la reserva en minutos o en horas, dependiendo del rol existen cuotas diarias de uso del laboratorio.
 4. Seleccione los nodos a reservar.
-5. A medida que reserva los nodo puede seleccionar la aplicación a instalar.
-6. Una vez configurada la reserva haga click en **Create Experiment**.
+5. A medida que reserva los nodo puede seleccionar la aplicación a ejecutar.
+6. Una vez definido el experimento haga click en **Create Experiment**.
 
 
 <div align="center" style={{margin: '20px'}}>
@@ -44,12 +48,15 @@ Al ingresar en el menú  **Experiments -> My Experiments**  encontrará una list
 Dependiendo de la aplicación a cargar en los nodos, el usuario tiene las siguientes opciones de conexión:
 
 * Una interfaz web **jupyter** para trabajar con archivos python.
-* Una interfaz web **SSH** para acceder al nodo y ejecutar comandos específicos. Si realizó la instalación de algún paquete, toda la información se perderá dado a que el laboratorio se basa en contenedores Docker.
-* Una interfaz web **VNC*** , esta opción está disponible únicamente para los equipos que ejecutan la aplicación GNU Radio.
+* Una interfaz web **SSH** para acceder al nodo y ejecutar comandos específicos. 
+ 
+ Si realizó la instalación de algún paquete, toda la información se perderá dado a que el laboratorio se basa en contenedores Docker.
+* Una interfaz web **VNC**  para realizar el control mediante interfaz gráfica.
 
-Igualmente, durante el desarrollo del experimento tiene la posibilidad apagar o encender el nodo, tenga en cuenta que al apagar el nodo, está apagando el computador embebido y el dispositivo SDR o IOT.  Si enciende el nodo deberá esperar un tiempo aproximado de 1 minuto mientras se despliega nuevamente la aplicación seleccionada para tener acceso mediante SSH o WEB.
+Igualmente, durante el desarrollo del experimento tiene la posibilidad apagar o encender el nodo, tenga en cuenta que al apagar el nodo, está apagando el equipo junto con los  dispositivos que tenga instalados. 
+Si enciende el nodo deberá esperar un tiempo aproximado de 1 minuto mientras se despliega nuevamente la aplicación seleccionada para tener acceso mediante SSH o WEB.
 
-Si desea acceder a estas aplicaciones mediante un terminal SSH desde su computador revise el tutorial avanzado.
+Si desea acceder a estas aplicaciones mediante un terminal SSH desde su computador revise el  [tutorial avanzado](./advance.mdx)  .
 
 Para conocer más acerca de cómo usar  aplicaciones que dispone el laboratorio puede ir a Tutoriales.
 

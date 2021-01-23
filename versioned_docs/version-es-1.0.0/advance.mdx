@@ -26,7 +26,7 @@ El laboratorio genera una dirección IP por cada nodo reservado. En la sección 
 
 ## Acceder mediante archivo config
 Si es usuario de equipos con sistema operativo Linux / MacOS / Windows 10 es posible acceder al laboratorio creando un archivo config en la ruta donde se almacenan sus claves ssh (Ver Guía de inicio rápido)  agregando la siguiente información:
-```
+```sh
 Host wirid-lab
     HostName wirid-lab.umng.edu.co
     User geustuser
@@ -46,7 +46,7 @@ Por cada experimento debe volver a configurar el archivo config para acceder a l
 
 ## Acceder por línea de comando
 Para ingresar mediante línea de comandos basta con abrir un terminal/powershell y ejecutar la siguiente instrucción
-```
+```sh
 ssh -p 2222 guestuser@wirid-lab.umng.edu.co -L <LOCAL_PORT_1>:<IP>:5901 -L <LOCAL_PORT_2>:<IP>:6901 -L <LOCAL_PORT_N>:<IP>:<SOURCE_PORT_N> 
 ```
 
