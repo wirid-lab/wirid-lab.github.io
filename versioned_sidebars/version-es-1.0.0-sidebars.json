@@ -61,6 +61,26 @@
                 }
                 
             ]
+        },
+        {
+            "collapsed": true,
+            "type": "category",
+            "label": "Tutoriales",
+            "items": [
+                {
+                    "type": "doc",
+                    "id": "version-es-1.0.0/tutorials/matlab"
+                },
+                {
+                    "type": "doc",
+                    "id": "version-es-1.0.0/tutorials/gnu-radio"
+                },
+                {
+                    "type": "doc",
+                    "id": "version-es-1.0.0/tutorials/vsg-control"
+                }
+               
+            ]
         }
     ]
 }
