@@ -1,3 +1,12 @@
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ * @format
+ */
+
 import React from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
@@ -59,11 +68,11 @@ function Home() {
   const {siteConfig = {}} = context;
   return (
     <Layout
-      title={`Inicio  ${siteConfig.title}`}
+      title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
-          <h1 className="hero__title"> <img src="./img/logo-wirid-final-blanco-umng.png" width="80%"></img> </h1>
+          <h1 className="hero__title"> <img src="./img/logo-wirid-final-blanco-umng.png" width="80%"></img></h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
           <div className={styles.buttons}>
             <Link
@@ -72,7 +81,7 @@ function Home() {
                 styles.getStarted,
               )}
               to={useBaseUrl('docs/')}>
-             Ver Documentación
+             DOCS
             </Link>
           </div>
         </div>
@@ -82,8 +91,13 @@ function Home() {
           <section className={styles.features}>
             <div className="container">
               <div className="row">
-                {features.map((props, idx) => (
-                  <Feature key={idx} {...props} />
+                {features.map(({title, imageUrl, description}) => (
+                  <Feature
+                    key={title}
+                    title={title}
+                    imageUrl={imageUrl}
+                    description={description}
+                  />
                 ))}
               </div>
             </div>

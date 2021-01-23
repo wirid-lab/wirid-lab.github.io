@@ -1,5 +1,11 @@
-const remarkImages = require('remark-images');
-const rehypeTruncate = require('rehype-truncate');
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ * @format
+ */
 
 module.exports = {
   title: 'Wirid - Lab',
@@ -7,14 +13,15 @@ module.exports = {
   url: 'https://github.com/wirid-lab/wirid-lab.github.io.git',
   baseUrl: '/',
   onBrokenLinks: 'throw',
-  favicon: 'img/favicon-96x96.png',
-  organizationName: 'lealarcon', // Usually your GitHub org/user name.
-  projectName: 'wirid-docu.', // Usually your repo name.
+  onBrokenMarkdownLinks: 'warn',
+  favicon: 'img/favicon.ico',
+  organizationName: 'wirid-lab', // Usually your GitHub org/user name.
+  projectName: 'wirid-docu', // Usually your repo name.
   themeConfig: {
     navbar: {
       title: '',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'WIRID-LAB',
         src: 'img/logo-wirid-final-blanco.png',
       },
       items: [
@@ -42,65 +49,79 @@ module.exports = {
           label: 'GitHub',
           position: 'right',
           className: 'header-github-link',
-        },
+        }
       ],
     },
-   footer: {
-     links:[]
-   }
-    // footer: {
-    //   style: 'dark',
-    //   links: [
-    //     {
-    //       title: 'Docs',
-    //       items: [
-    //         {
-    //           label: 'Style Guide',
-    //           to: 'docs/',
-    //         },
-    //         {
-    //           label: 'Second Doc',
-    //           to: 'docs/doc2/',
-    //         },
-    //       ],
-    //     },
-    //     {
-    //       title: 'Community',
-    //       items: [
-    //         {
-    //           label: 'Stack Overflow',
-    //           href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-    //         },
-    //         {
-    //           label: 'Discord',
-    //           href: 'https://discordapp.com/invite/docusaurus',
-    //         },
-    //         {
-    //           label: 'Twitter',
-    //           href: 'https://twitter.com/docusaurus',
-    //         },
-    //       ],
-    //     },
-    //     {
-    //       title: 'More',
-    //       items: [
-    //         {
-    //           label: 'Blog',
-    //           to: 'blog',
-    //         },
-    //         {
-    //           label: 'GitHub',
-    //           href: 'https://github.com/facebook/docusaurus',
-    //         },
-    //       ],
-    //     },
-    //   ],
-    //   copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
-    // },
+    footer: {
+      style: 'dark',
+      links: [
+        // {
+        //   title: 'Learn',
+        //   items: [
+        //     {
+        //       label: 'Style Guide',
+        //       to: 'docs/',
+        //     },
+        //     {
+        //       label: 'Second Doc',
+        //       to: 'docs/doc2',
+        //     },
+        //   ],
+        // },
+        // {
+        //   title: 'Community',
+        //   items: [
+        //     {
+        //       label: 'Stack Overflow',
+        //       href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+        //     },
+        //     {
+        //       label: 'Twitter',
+        //       href: 'https://twitter.com/docusaurus',
+        //     },
+        //     {
+        //       label: 'Discord',
+        //       href: 'https://discordapp.com/invite/docusaurus',
+        //     },
+        //   ],
+        // },
+        // {
+        //   title: 'More',
+        //   items: [
+        //     {
+        //       label: 'Blog',
+        //       to: 'blog',
+        //     },
+        //     {
+        //       label: 'GitHub',
+        //       href: 'https://github.com/facebook/docusaurus',
+        //     },
+        //   ],
+        // },
+        // {
+        //   title: 'Legal',
+        //   // Please do not remove the privacy and terms, it's a legal requirement.
+        //   items: [
+        //     {
+        //       label: 'Privacy',
+        //       href: 'https://opensource.facebook.com/legal/privacy/',
+        //     },
+        //     {
+        //       label: 'Terms',
+        //       href: 'https://opensource.facebook.com/legal/terms/',
+        //     },
+        //   ],
+        // },
+      ],
+      // logo: {
+      //   alt: 'Facebook Open Source Logo',
+      //   src: 'img/oss_logo.png',
+      //   href: 'https://opensource.facebook.com',
+      // },
+      // Please do not remove the credits, help to publicize Docusaurus :)
+      copyright: `Copyright © ${new Date().getFullYear()} Facebook, Inc. Built with Docusaurus.`,
+    },
   },
-  plugins: [
-   
-  ],
   presets: [
     [
       '@docusaurus/preset-classic',
@@ -109,11 +130,8 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/wirid-lab/wirid-lab.github.io/blob/master/',
-            remarkPlugins: [remarkImages],
-            rehypePlugins: [rehypeTruncate],
+            'https://github.com/facebook/docusaurus/edit/master/website/',
         },
-    
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
