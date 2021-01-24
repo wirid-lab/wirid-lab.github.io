@@ -27,6 +27,25 @@
                 {
                     "type": "doc",
                     "id": "version-es-1.0.0/radio/description"
+                },
+                {
+                    "collapsed": true,
+                    "type": "category",
+                    "label": "Tipo de Nodos",
+                    "items": [
+                        {
+                            "type": "doc",
+                            "id": "version-es-1.0.0/radio/pc-nodes"
+                        },
+                        {
+                            "type": "doc",
+                            "id": "version-es-1.0.0/radio/rpi-nodes"
+                        },
+                        {
+                            "type": "doc",
+                            "id": "version-es-1.0.0/radio/jetson-nodes"
+                        }
+                    ]
                 }
             ]
         },
@@ -56,10 +75,8 @@
                             "type": "doc",
                             "id": "version-es-1.0.0/iot/mqtt"
                         }
-                       
                     ]
                 }
-                
             ]
         },
         {
@@ -79,7 +96,6 @@
                     "type": "doc",
                     "id": "version-es-1.0.0/tutorials/vsg-control"
                 }
-               
             ]
         }
     ]
