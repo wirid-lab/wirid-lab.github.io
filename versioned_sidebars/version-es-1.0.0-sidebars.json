@@ -95,7 +95,28 @@
                 {
                     "type": "doc",
                     "id": "version-es-1.0.0/tutorials/vsg-control"
+                },
+                {
+                    "collapsed": true,
+                    "type": "category",
+                    "label": "LoRa",
+                    "items": [
+                        {
+                            "type": "doc",
+                            "id": "version-es-1.0.0/tutorials/lora/lora-gateway"
+                        },
+                        {
+                            "type": "doc",
+                            "id": "version-es-1.0.0/tutorials/lora/heltec-v1"
+                        },
+                        {
+                            "type": "doc",
+                            "id": "version-es-1.0.0/tutorials/lora/rak5205"
+                        }
+                    ]
                 }
+
+               
             ]
         }
     ]
