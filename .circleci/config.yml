@@ -19,11 +19,13 @@ jobs:
       - run:
           name: Deploying to GitHub Pages
           command: |
-            git config --global user.email "lealarcon@users.noreply.github.com"
-            git config --global user.name "lealarcon"
-            echo "machine github.com login lealarcon password $GITHUB_TOKEN" > ~/.netrc
-            yarn install && GIT_USER=lealarcon &&  yarn run build
-            cd build && git init && git add .
+            git config --global user.email "wirid-lab@users.noreply.github.com"
+            git config --global user.name "wirid-lab"
+            echo "machine github.com login wirid-lab password $GITHUB_TOKEN" > ~/.netrc
+            yarn install && GIT_USER=wirid-lab &&  yarn run build
+            cd build
+            git init
+            git add .
             git commit -m $CIRCLE_BUILD_NUM
             git remote add origin git@github.com:wirid-lab/wirid-lab.github.io.git
             git push --force origin master:gh-pages
