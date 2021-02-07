@@ -19,7 +19,6 @@ jobs:
       - run:
           name: Deploying to GitHub Pages
           command: |
-            apt install -y yarn 
             git config --global user.email "wirid-lab@users.noreply.github.com"
             git config --global user.name "wirid-lab"
             echo "machine github.com login wirid-lab password $GITHUB_TOKEN" > ~/.netrc
