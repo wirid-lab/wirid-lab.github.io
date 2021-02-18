@@ -29,9 +29,10 @@ Una vez creada la reserva, podrá ingresar al servidor web del gateway mediante 
 ## VNC
 - Seleccione la opción VNC en **My Experiments**
 - Abra su cliente VNC
-- Para ingresar por este metodo utilice la URL asignada por el laboratorio seguido del puerto destinado para trabajar con VNC 5901 
+- Para ingresar por este metodo utilice la URL asignada por el laboratorio, la cual tiene un formato como el siguiente **http://wirid-lab-node-58-e9bd84-vnc.wirid-lab.umng.edu.co/**
 - Ingrese el token de la reserva como contraseña 
 
+![](./../img/lora/heltec-access-application.png)
 
 ### Configurando desde VNC
 Una vez que se encuentre en el escritorio de VNC, abra una consola de terminal y ejecute de manera consecutiva los siguientes pasos:
@@ -59,20 +60,43 @@ las cuales se encuentran en la carpeta **Heltec** en el repositorio descargado a
 
 - Para descomprimir el archivo y enviarlo a la ruta en la cual debe esta, ingrese en su terminal el comando
 ````
-unar -o /Arduino lora-chirpstack-resources/Heltec/ESP32_Heltec_Libraries.zip
+cd
+unar -o Arduino/ lora-chirpstack-resources/Heltec/ESP32_Heltec_Libraries.zip
 ````
 Comando que permitira descomprimir la carpeta en el directorio en el cual se encuentra el programa de Arduino.
 
+![](./../img/lora/heltec-unar.png)
+
 - Dirijase al gestor de archivos, y abra el directorio donde se descomprimio el contenido de la carpeta **.zip**, en donde debe identificar
-el directorio con Nombre ESP32_Heltec_Libraries, ingresar al mismos y copiar todos los directorios que se encuentran en el subdirectorio **libraries**
+el directorio con Nombre ESP32_Heltec_Libraries, ingresar hasta la ruta **/root/Arduino/ESP32_Heltec_Libraries/libraries** y copiar todos los directorios que se encuentran en el subdirectorio **libraries**
+
+![](./../img/lora/heltec-gestor-archivos.png)
+
+- Regrese a la ruta **/root/Arduino/libraries** y pegue los directorios copiados en el interior del directorio **libraries**
+
+![](./../img/lora/heltec-libraries-paste.png)
+
+- Cierre el gestor de archivos y continue
 
 - Ingrese nuevamente al terminal y ejecute el comando 
 
 ````
 cd
-cp -r lora-chirpstack-resources/Heltec/abp_chirpstack_us915_dht11 /Arduino/
-cp -r lora-chirpstack-resources/Heltec/abp_chirpstack_us915_dht11_OLED /Arduino/
+cp -r lora-chirpstack-resources/Heltec/abp_chirpstack_us915_dht11 Arduino/
+cp -r lora-chirpstack-resources/Heltec/abp_chirpstack_us915_dht11_OLED Arduino/
 ````
 - Cierre la terminal y proceda a ejecutar el IDE de Arduino, siguiendo el camino **Inicio >> Programas >> Arduino**
 
 ![](./../img/lora/heltec-opening-arduino.png)
+
+- En el IDE de Arduino siga la ruta **File >> Sketchbook** y seleccione el ejemplo copiado anteriormente **abp_chirpstack_us915_dht11**
+
+![](./../img/lora/heltec-arduino-code1.png)
+
+- Dirijase al aplicativo de lora Chirpstack para obtener los datos de activacion del nodo, el cual corresponde a otro servicio que se debe lanzar y corresponde a Lora gateway
+
+![](./../img/lora/heltec-activation-abp.png)
+
+- Ingrese los datos identificados en el codigo de Arduino, de modo que el dispositivo se active correctamente en la plataforma chirpstack
+
+
