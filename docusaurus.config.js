@@ -40,6 +40,10 @@ module.exports = {
           label: 'Dashboard',
         },
         {
+          href: 'https://wirid-lab.umng.edu.co/#/status-lab',
+          label: 'Status Lab',
+        },
+        {
           href: 'https://gissic.umng.edu.co/wirid-lab',
           label: 'Blog',
         },
